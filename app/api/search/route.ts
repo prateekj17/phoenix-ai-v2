@@ -1,0 +1,3 @@
+import {NextRequest,NextResponse} from 'next/server';
+const stocks=['RELIANCE','TCS','HDFCBANK','ICICIBANK','INFY','BHARTIARTL','ITC','SBIN','LT','AXISBANK','KOTAKBANK','HINDUNILVR','BAJFINANCE','MARUTI','SUNPHARMA','TITAN','TATAMOTORS','WIPRO','NTPC','POWERGRID','ADANIENT','ADANIPORTS','HCLTECH','TECHM','ULTRACEMCO','ASIANPAINT','TATASTEEL','COALINDIA','ONGC','BEL','HAL','TRENT','DMART','INDIGO','ZOMATO','JIOFIN','BAJAJFINSV','NESTLEIND','EICHERMOT','M&M'];
+export async function GET(r:NextRequest){const q=(r.nextUrl.searchParams.get('q')||'').toUpperCase();return NextResponse.json({symbols:stocks.filter(s=>s.includes(q)).slice(0,15),note:'Suggestions are a curated list; valid NSE symbols can also be entered manually.'})}
