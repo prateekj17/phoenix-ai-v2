@@ -1,0 +1,1 @@
+import type {Metadata} from 'next';import './globals.css';export const metadata:Metadata={title:'PHOENIX AI 2.0 | Indian Equity Intelligence',description:'Rules-based NSE stock screening, swing and positional rankings with transparent ATR risk levels.'};export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
